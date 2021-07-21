@@ -1,0 +1,142 @@
+@import './utils/reset.scss';
+@import './utils/mixin.scss';
+body {
+    background-color: lightgrey;
+}
+
+.wrapper {
+    width: 1300px;
+    height: 604px;
+    background-color: #ffffff;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 133.5px 0 174.5px 100px;
+    &_opacity {
+        height: 202px;
+        width: 300px;
+        background: linear-gradient( 90deg, rgba(255, 255, 255, 0), white);
+        position: absolute;
+        right: 0px;
+        z-index: 2;
+    }
+    &_title {
+        @include mainFonts700;
+        margin-right: 44px;
+    }
+    &_line {
+        width: 1094px;
+        height: 202px;
+        overflow: hidden;
+        position: relative;
+    }
+    &_sliders {
+        width: 2500px;
+        height: inherit;
+        display: flex;
+        justify-content: space-between;
+        left: 30px;
+        transition: 1s;
+    }
+    &_slider {
+        display: flex;
+        width: 820px;
+        height: 202px;
+        background: #FFFFFF;
+        border-radius: 5px;
+        padding: 30px 0 36px 36px;
+    }
+    &_slider:nth-child(1),
+    &_slider:nth-child(2) {
+        box-shadow: 0px 4px 32px rgba(157, 169, 194, 0.24);
+    }
+    &_slider-content {
+        margin: 0 49px 0 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &_slider-content::after {
+        content: '';
+        position: absolute;
+        width: 142px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #7F5AF0;
+        transform: rotate( 90deg);
+        right: -117px;
+        top: 69px;
+    }
+    &_slider-name {
+        width: 87px;
+        height: 40px;
+        @include mainFonts500;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    &_slider-commentImg {
+        width: 18px;
+        height: 30px;
+        background-image: url('../img/comments.png');
+        position: relative;
+    }
+    &_slider-commentImg::after {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 30px;
+        background-image: url('../img/comments.png');
+        right: -23px;
+    }
+    &_slider-comment {
+        @include mainFonts300;
+        font-size: 16px;
+        line-height: 20px;
+        width: 500px;
+        height: 142px;
+        padding: 0 0 0 25px;
+    }
+    &_top {
+        display: flex;
+        justify-content: start;
+        margin: 0 0 40px 0;
+    }
+    &_buttons {
+        display: flex;
+        align-items: center;
+        height: 46px;
+    }
+    &_button-prev {
+        @include button;
+        transform: rotate( -45deg);
+        margin-right: 32px;
+        opacity: 0.3;
+    }
+    &_button-prev::after {
+        content: '';
+        @include button;
+        transform: rotate( -90deg);
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    &_button-next {
+        @include button;
+        transform: rotate( 45deg);
+        opacity: 0.3;
+    }
+    &_button-next::after {
+        content: '';
+        @include button;
+        transform: rotate( 90deg);
+        position: absolute;
+        top: 10px;
+        right: -10px;
+    }
+}
+
+.active {
+    opacity: 1;
+}

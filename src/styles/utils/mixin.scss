@@ -1,0 +1,39 @@
+@import './fonts.scss';
+@mixin mainFonts100 {
+    font-family: "MuseoSansCyrl-100";
+    font-size: 33px;
+    color: #171718;
+}
+
+@mixin mainFonts300 {
+    font-family: "MuseoSansCyrl-300";
+    font-size: 33px;
+    color: #171718;
+}
+
+@mixin mainFonts500 {
+    font-family: "MuseoSansCyrl-500";
+    font-size: 33px;
+    color: #171718;
+}
+
+@mixin mainFonts700 {
+    font-family: "MuseoSansCyrl-700";
+    font-size: 45px;
+    color: #171718;
+}
+
+@mixin mainFonts900 {
+    font-family: "MuseoSansCyrl-900";
+    font-size: 33px;
+    color: #171718;
+}
+
+@mixin button {
+    width: 23px;
+    height: 4px;
+    border-radius: 5px;
+    background: rgba(127, 90, 240, 1);
+    position: relative;
+    cursor: pointer;
+}
